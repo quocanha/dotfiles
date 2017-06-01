@@ -1,0 +1,15 @@
+- clean: ['~']
+
+- link:
+    ~/.zshenv:
+        path: zshenv
+        create: false
+        relink: false
+        force: false
+    ~/.zshrc:
+        path: zshrc
+        create: false
+        relink: false
+        force: false
+
+
