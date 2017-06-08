@@ -13,4 +13,3 @@
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.zlogin: zlogin
-    ~/.Xmodmap: Xmodmap
