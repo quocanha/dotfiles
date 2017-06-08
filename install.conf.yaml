@@ -1,15 +1,16 @@
+- defaults:
+    link:
+      create: false
+      relink: true
+      force: false
+      relative: false
+      
+- shell: []
+
 - clean: ['~']
 
 - link:
-    ~/.zshenv:
-        path: zshenv
-        create: false
-        relink: false
-        force: false
-    ~/.zshrc:
-        path: zshrc
-        create: false
-        relink: false
-        force: false
-
-
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
+    ~/.zlogin: zlogin
+    ~/.Xmodmap: Xmodmap
