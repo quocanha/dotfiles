@@ -95,3 +95,6 @@ zstyle :compinstall filename '/home/an/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+# Setup named directories
+hash -d bn=~/Projects/Bijlesnetwerk/repos

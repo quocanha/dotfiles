@@ -10,4 +10,4 @@ export SSH_ASKPASS="/usr/bin/ksshaskpass"
 export MAKEFLAGS="-j$(nproc)"
 
 # Set JAVA_HOME
-export JAVA_HOME="/usr/bin/java"
+export JAVA_HOME="/usr/lib/jvm/default"
