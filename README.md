@@ -12,7 +12,7 @@ This repository contains my personal dotfiles that I use for my system.
 # Setup
 For setup of this repository, first create an alias in `.bashrc` or `zshrc`:
 ```
-alias config='/usr/bin/git --git-dir=$HOME/dv/an/dotfiles --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/dv/an/dotfiles --work-tree=$HOME'
 ```
 Then we clone this repository, but make sure to use the `--bare` flag:
 ```
