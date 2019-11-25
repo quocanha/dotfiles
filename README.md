@@ -31,7 +31,7 @@ Git throws an error if files from the repository already exist locally.
 To solve this, we simply have to backup/remove them.
 
 # Usage 
-This repository is managed as described in [this blogpage](https://atlassian.org/git/tutorials/dotfiles), based on the comment by *StreakyCobra* on [Hacker News](https://news.ycombinator.com/item?id=11070797).
+This repository is managed as described in [this blogpage](https://atlassian.com/git/tutorials/dotfiles), based on the comment by *StreakyCobra* on [Hacker News](https://news.ycombinator.com/item?id=11070797).
 
 The setup here is that a git repository is created in a sub-directory of `$HOME`: `$HOME/dv/an/dotfiles`. An `alias` is then created where we manually specify the git directory and the working directory. `alias dotfiles="/usr/bin/git --git-dir=$HOME/dv/an/dotfiles --work-tree=$HOME"`.
 
