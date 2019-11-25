@@ -61,8 +61,8 @@ font-2 = "DejaVu Sans Mono:pixelsize=10;-3"
 
 ; Modules positions
 modules-left        = powermenu i3
-modules-center      = xkeyboard date backlight-acpi
-modules-right       = cpu memory wlan pulseaudio battery
+modules-center      = xkeyboard date
+modules-right       = cpu memory pulseaudio 
 
 ; Tray
 tray-position       = right
