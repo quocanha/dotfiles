@@ -14,7 +14,7 @@ For setup of this repository, first create an alias in `.bashrc` or `zshrc`:
 ```
 alias config='/usr/bin/git --git-dir=$HOME/dv/an/dotfiles --work-tree=$HOME'
 ```
-Then we clone this repository, but make sure to use the **--bare** flag:
+Then we clone this repository, but make sure to use the `--bare` flag:
 ```
 git clone --bare git@github.com:quocanha/dotfiles.git $HOME/dv/an/dotfiles
 ```
@@ -23,7 +23,10 @@ We also set the `showUntrackedFiles` flag to no on this repository.
 ```
 dotfiles config --local status.showUntrackedFiles no
 ```
-Afterwards, we can run `dotfiles checkout` to have git download all files.
+Afterwards, to have git download all dotfiles into our system, run:
+```
+dotfiles checkout
+```
 
 ## Setup Troubeshooting
 ### Existing files
