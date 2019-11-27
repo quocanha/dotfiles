@@ -31,6 +31,13 @@ dotfiles checkout
 
 ## Repository Dependencies
 These are not package dependencies, for those, just look at the error messages and install the corresponding packages. This section is devoted to other git repositories that the dotfiles use. This section could possibly be extended in the future to as git submodules.
+
+### Tmux Plugin Manager
+Repository found at [https://github.com/tmux-plugins/tpm](https://github.com/tmux-plugins/tpm), needs to be __cloned__ at: `~/.tmux/plugins/tmp`. Run the following one-liner.
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
 ### polybar-scripts
 Repository found at [https://github.com/polybar/polybar-scripts](https://github.com/polybar/polybar-scripts), needs to be __cloned__at: `~/dv/an/dotfiles/repositories/`. Then chmod the scripts that need execute permissions, these are:
 * updates-arch-combined
