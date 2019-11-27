@@ -99,9 +99,25 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="/home/an/anaconda3/bin:$PATH"
+# export PATH="/home/an/anaconda3/bin:$PATH"  # commented out by conda initialize
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/dv/an/dotfiles --work-tree=$HOME"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/an/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/an/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/an/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/an/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
