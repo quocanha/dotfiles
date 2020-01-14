@@ -98,7 +98,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+export VISUAL=vim
+export EDITOR="$VISUAL"
 export LC_ALL=en_US.UTF-8
 export PATH="/home/an/anaconda3/bin:$PATH"
 export XDG_CONFIG_HOME=$HOME/.config
@@ -108,3 +109,8 @@ export XDG_DATA_HOME=$HOME/.local/share
 export TERM=xterm-256color
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/dv/an/dotfiles --work-tree=$HOME"
+
+FSLDIR=/home/an/.cache/yay/fsl/src/fsl
+. ${FSLDIR}/etc/fslconf/fsl.sh
+PATH=${FSLDIR}/bin:${PATH}
+export FSLDIR PATH
