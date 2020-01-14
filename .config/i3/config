@@ -54,6 +54,12 @@ bindsym $mod+Shift+q kill
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -261,7 +267,7 @@ exec --no-startup-id redshift-gtk -l 51.8425:5.85278
 ## Network Manager
 exec --no-startup-id nm-applet
 ## Caps to Super
-exec --no-startup-id setxkbmap -option caps:super
+exec --no-startup-id setxkbmap -option caps:escape
 ## Open polybar
 exec --no-startup-id ~/scripts/launch_polybar.sh
 ##exec --no-startup-id polybar top_gruvbox_flat

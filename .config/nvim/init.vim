@@ -19,30 +19,41 @@ Plug 'vimwiki/vimwiki'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'Valloric/YouCompleteMe'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
-Plug 'leafgarland/typescript-vim'	" Enables typescript syntax highlighting.
-Plug 'yuezk/vim-js'			" Enables javascript syntax highlighting.
-" Plug 'maxmellon/vim-jsx-pretty'		" Enables .jsx (react) syntax highlighting, also for .tsx
-Plug 'peitalin/vim-jsx-typescript'	" Enables .jsx and .tsx syntax highlighting
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-surround'
+
+" Plug 'leafgarland/typescript-vim'	" Enables typescript syntax highlighting.
+" Plug 'yuezk/vim-js'			" Enables javascript syntax highlighting.
+Plug 'maxmellon/vim-jsx-pretty'		" Enables .jsx (react) syntax highlighting, also for .tsx
+" Plug 'peitalin/vim-jsx-typescript'	" Enables .jsx and .tsx syntax highlighting
+Plug 'takac/vim-hardtime'		" Vim Hardtime - used to improve vim habits
 call plug#end()
 
+
+let g:hardtime_default_on = 1
+" let g:hardtime_showmsg = 1
+" let g:hardtime_showerr = 1
 " Set the local leader.
 "let mapleader = "\\"
 let maplocalleader = " "
 
 " Rebind window navigation keybinds
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-l> <C-w>l
 
 " Override/set default flags
 set nocompatible
-set number				" Show current line number
+set number			    	" Show current line number
 set relativenumber			" Show relative line numbers
 filetype plugin on
+set tabstop=4				" Show existing tab with 4 spaces width
+set shiftwidth=4			" When indenting with '>', use 4 spaces width
+set softtabstop=4			" 
+set expandtab				" On pressing tab, insert 4 spaces
 syntax on
 
 " Custom key mapping
@@ -52,9 +63,10 @@ map <C-n> :NERDTreeToggle<CR>
 let g:vimtex_view_general_viewer = "zathura"
 
 " Gruvbox flags
-let g:gruvbox_contrast_dark = 'hard'
+" let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 set bg=dark
+" set bg=light
 
 " Autocommands
 "autocmd vimenter * NERDTree 		" Open NERDTree automatically with vim
@@ -64,7 +76,12 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 " Configure YouCompleteMe to autocomplete
-if !exists("g:ycm_semantic_triggers")
-  let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers['typescript'] = ['.']
+" if !exists("g:ycm_semantic_triggers")
+"   let g:ycm_semantic_triggers = {}
+" endif
+" let g:ycm_semantic_triggers['typescript'] = ['.']
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"

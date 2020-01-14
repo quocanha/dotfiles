@@ -105,6 +105,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
 export TERM=xterm-256color
+export EDITOR=nvim
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/dv/an/dotfiles --work-tree=$HOME"
 
@@ -123,3 +124,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+FSLDIR=/opt/fsl
+. ${FSLDIR}/etc/fslconf/fsl.sh
+PATH=${FSLDIR}/bin:${PATH}
+export FSLDIR PATH
